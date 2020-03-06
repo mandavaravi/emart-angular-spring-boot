@@ -1,0 +1,53 @@
+
+<div class="container">
+    <div class="row">
+      <div 
+          class="col-sm-12 col-md-6 col-lg-3"
+          *ngFor="let item of allItems">
+        <div class="card w-lg-25 w-md-50 w-sm-100 mx-2 my-2  card-hover">
+          <img class="card-img-top img-size"
+               [src]="item.itemImage"
+               [alt]="item.itemName" />
+               
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6">
+                <h6 class="text-left">{{ item.itemName }}</h6>
+              </div>
+              <div class="col-6">
+                <p class="text-left">Description: {{ item.itemDescription }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h6 class="text-left">Price: {{ item.itemPrice }}</h6>
+              </div>
+            </div>
+            <div class="row reveal">
+              <div class="col-6 small">
+                <button 
+                  class="btn btn-primary" 
+                  (click)="displayItemDetails(item.itemId)">
+                  
+                  <i class="material-icons small align-middle">list</i>
+                  
+                  <span class="align-middle mx-3 "><small>Details</small></span>
+                </button>
+              </div>
+
+              <div class="col-6 small">
+                <button 
+                  class="btn btn-secondary" 
+                  (click)="addToCart(item)">
+                  
+                  <i class="material-icons small align-middle">add_shopping_cart</i>
+                  
+                  <span class="align-middle mx-3 "><small> Cart</small></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
