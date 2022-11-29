@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'eMart';
+  // latest commit on 28th Nov 2022
 }
